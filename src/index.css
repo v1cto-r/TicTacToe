@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Oswald', sans-serif;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+.italic-hover {
+  transition: transform 0.3s ease; 
+}
+
+.italic-hover:hover {
+  transform: skewX(-7deg); 
+}
+
+.cursor svg {
+  transition: transform 0.3s ease;
+}
