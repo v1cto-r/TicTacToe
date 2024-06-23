@@ -42,8 +42,9 @@ export class Game {
   bot: Bot
   setXWins: () => void
   setOWins: () => void
+  tieSetter: () => void
 
-  constructor(setXWins: () => void, setOWins: () => void) {
+  constructor(setXWins: () => void, setOWins: () => void, tieSetter: () => void) {
     this.grid = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
     this.xIcon = '<path d="m249-183-66-66 231-231-231-231 66-66 231 231 231-231 66 66-231 231 231 231-66 66-231-231-231 231Z"/>'
     this.oIcon = '<path d="M480.14-55Q392-55 314.51-88.08q-77.48-33.09-135.41-91.02-57.93-57.93-91.02-135.27Q55-391.72 55-479.86 55-569 88.08-646.49q33.09-77.48 90.86-134.97 57.77-57.48 135.19-91.01Q391.56-906 479.78-906q89.22 0 166.83 33.45 77.6 33.46 135.01 90.81t90.89 134.87Q906-569.34 906-480q0 88.28-33.53 165.75t-91.01 135.28q-57.49 57.8-134.83 90.89Q569.28-55 480.14-55Zm-.14-94q138 0 234.5-96.37T811-480q0-138-96.5-234.5t-235-96.5q-137.5 0-234 96.5t-96.5 235q0 137.5 96.37 234T480-149Zm0-331Z"/>'
@@ -52,6 +53,7 @@ export class Game {
     this.bot = new Bot()
     this.setXWins = setXWins
     this.setOWins = setOWins
+    this.tieSetter = tieSetter
   }
 
   public getGrid(): number[][] {
@@ -144,11 +146,19 @@ export class Game {
         if (grid[a[0]][a[1]] === 1) {
           this.lastWinner = 1
           this.setXWins()
+          return
         } else {
           this.lastWinner = 2
           this.setOWins()
+          return
         }
       }
+    }
+
+    const isGridFull = grid.every(row => row.every(cell => cell !== 0)) 
+    if (isGridFull) {
+      this.lastWinner = -1
+      this.tieSetter()
     }
   }
 

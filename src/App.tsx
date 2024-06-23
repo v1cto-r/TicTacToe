@@ -31,8 +31,13 @@ function App() {
       announcementsElement!.textContent = 'O WINS! (Click to reset)'
     }
   }
+
+  function tieSetter(): void {
+    const announcementsElement = document.getElementById('announcements');
+    announcementsElement!.textContent = 'TIE! (Click to reset)'
+  }
   
-  const game = new Game(xWinsSetter, oWinsSetter)
+  const game = new Game(xWinsSetter, oWinsSetter, tieSetter)
   
   const handleBoxClick = (e: React.MouseEvent<HTMLDivElement>) => {
     let winner = game.playMove(e.currentTarget.id as GridName, gameMode, difficulty)
