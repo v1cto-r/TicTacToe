@@ -1,30 +1,12 @@
 # TIC TAC TOE
 
-A Tic Tac Toe game developed in Vite using React and Typescript
+A Tic Tac Toe game developed in Vite using React, Typescript and TailwindCSS
 
-Currently, two official plugins are available:
+Currently being hosted on vercel @ https://my-tic-tac.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## About the development
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Originally thought to improve my previous Tic-Tac-Toe game, my new game implements a complete change. Migrated from html, css and plain javascript, to using react, typescript and tailwind.
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Inspired by the [awwwards brutalist collection](https://www.awwwards.com/awwwards/collections/brutalism/), the design is minimalist and monotone. There is also a lot of interactivity in the site, with custom cursors and hovering actions.
