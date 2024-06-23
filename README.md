@@ -1,6 +1,6 @@
-# React + TypeScript + Vite
+# TIC TAC TOE
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Tic Tac Toe game developed in Vite using React and Typescript
 
 Currently, two official plugins are available:
 

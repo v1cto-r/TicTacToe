@@ -136,10 +136,10 @@ function App() {
       </div>
       <nav className='h-fit w-full flex justify-center items-center mb-4 sm:mb-0 sm:h-full sm:w-1/2'>
         <div className='h-full w-full flex flex-col justify-end items-start text-notWhite p-2'>
-          <h1 className='font-normal text-6xl sm:text-9xl '><a href='' className='hover:cursor-none'>TICTACTOE</a></h1>
+          <h1 className='font-normal text-6xl sm:text-9xl italic-hover'><a target="_blank" rel="noopener noreferrer" href='https://github.com/v1cto-r/TicTacToe' className='hover:cursor-none'>TICTACTOE</a></h1>
           <div className='w-full flex flex-row sm:flex-col'>
-            <h2 className={`font-normal text-6xl pr-16 sm:text-9xl sm:pr-0`}>X <span className='hidden sm:block'>SCORE</span>: <span id='xWins' className='italic'>0</span></h2>
-            <h2 className={`font-normal text-6xl sm:text-9xl`}>O <span className='hidden sm:block'>SCORE</span>: <span id='oWins' className='italic'>0</span></h2>
+            <h2 className={`flex font-normal text-6xl pr-16 sm:text-9xl sm:pr-0`}>X <span className='pl-4 hidden sm:block'> SCORE</span>: <span id='xWins' className='italic'>0</span></h2>
+            <h2 className={`flex font-normal text-6xl sm:text-9xl`}>O <span className='pl-4 hidden sm:block'> SCORE</span>: <span id='oWins' className='italic'>0</span></h2>
           </div>
           <div className={`font-normal text-6xl sm:text-9xl flex flex-row text-notWhite-dark`}>
             <h2 id='EASY' onClick={handleDifficultyClick} className={`italic-hover hover:text-notWhite ${difficulty === GameDifficulty.EASY ? 'text-notWhite italic' : ''}`}>EASY</h2>-
