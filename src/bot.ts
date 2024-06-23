@@ -12,7 +12,7 @@ export class Bot {
 
   constructor() {
     this.botGrid = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
-    this.lastMoveWasBest = false;
+    this.lastMoveWasBest = true;
   }
 
   
