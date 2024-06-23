@@ -9,7 +9,7 @@ export default {
       '2xl': ['1.6rem', {
         lineHeight: '1',
       }],
-      '6xl': ['3.6rem', {
+      '6xl': ['3.3rem', {
         lineHeight: '1',
       }],
       '9xl': ['6.9rem', {

@@ -137,8 +137,10 @@ function App() {
       <nav className='h-fit w-full flex justify-center items-center mb-4 sm:mb-0 sm:h-full sm:w-1/2'>
         <div className='h-full w-full flex flex-col justify-end items-start text-notWhite p-2'>
           <h1 className='font-normal text-6xl sm:text-9xl '><a href='' className='hover:cursor-none'>TICTACTOE</a></h1>
-          <h2 className={`font-normal text-6xl sm:text-9xl`}>X SCORE: <span id='xWins' className='italic'>0</span></h2>
-          <h2 className={`font-normal text-6xl sm:text-9xl`}>O SCORE: <span id='oWins' className='italic'>0</span></h2>
+          <div className='w-full flex flex-row sm:flex-col'>
+            <h2 className={`font-normal text-6xl pr-16 sm:text-9xl sm:pr-0`}>X <span className='hidden sm:block'>SCORE</span>: <span id='xWins' className='italic'>0</span></h2>
+            <h2 className={`font-normal text-6xl sm:text-9xl`}>O <span className='hidden sm:block'>SCORE</span>: <span id='oWins' className='italic'>0</span></h2>
+          </div>
           <div className={`font-normal text-6xl sm:text-9xl flex flex-row text-notWhite-dark`}>
             <h2 id='EASY' onClick={handleDifficultyClick} className={`italic-hover hover:text-notWhite ${difficulty === GameDifficulty.EASY ? 'text-notWhite italic' : ''}`}>EASY</h2>-
             <h2 id='MED' onClick={handleDifficultyClick} className={`italic-hover hover:text-notWhite ${difficulty === GameDifficulty.MEDIUM ? 'text-notWhite italic' : ''}`}>MED</h2>-
@@ -149,23 +151,23 @@ function App() {
           <h2 className={`font-normal text-6xl sm:text-9xl italic-hover`} onClick={handleRestartClick}>RESET BOARD</h2>
         </div>
       </nav>
-      <section className='h-full w-full sm:h-full sm:w-1/2 flex flex-col justify-center items-center'>
-        <div id='board' className='w-11/12 sm:w-9/12 mb-1 sm:mb-4 aspect-square flex '>
+      <section className='h-fit w-full sm:h-full sm:w-1/2 flex flex-col justify-center items-center'>
+        <div id='board' className='w-9/12 mb-1 sm:mb-4 aspect-square flex '>
           <div className='w-1/3 h-full'>
             <div onClick={handleBoxClick} id='ONE' className='gridBox w-full h-1/3 p-2 '><svg viewBox="0 -960 960 960" className='w-full h-full fill-notWhite'></svg></div>
-            <div onClick={handleBoxClick} id='FOUR' className='gridBox w-full h-1/3 p-2 border-y-8 border-notWhite '><svg viewBox="0 -960 960 960" className='w-full h-full fill-notWhite'></svg></div>
+            <div onClick={handleBoxClick} id='FOUR' className='gridBox w-full h-1/3 p-2 border-y-4 sm:border-y-8 border-notWhite '><svg viewBox="0 -960 960 960" className='w-full h-full fill-notWhite'></svg></div>
             <div onClick={handleBoxClick} id='SEVEN' className='gridBox w-full h-1/3 p-2 '><svg viewBox="0 -960 960 960" className='w-full h-full fill-notWhite'></svg></div>
 
           </div>
           <div className='w-1/3 h-full'>
-            <div onClick={handleBoxClick} id='TWO' className='gridBox w-full h-1/3 p-2 border-x-8 border-notWhite '><svg viewBox="0 -960 960 960" className='w-full h-full fill-notWhite'></svg></div>
-            <div onClick={handleBoxClick} id='FIVE' className='gridBox w-full h-1/3 p-2 border-8 border-notWhite '><svg viewBox="0 -960 960 960" className='w-full h-full fill-notWhite'></svg></div>
-            <div onClick={handleBoxClick} id='EIGHT' className='gridBox w-full h-1/3 p-2 border-x-8 border-notWhite '><svg viewBox="0 -960 960 960" className='w-full h-full fill-notWhite'></svg></div>
+            <div onClick={handleBoxClick} id='TWO' className='gridBox w-full h-1/3 p-2 border-x-4 sm:border-x-8 border-notWhite '><svg viewBox="0 -960 960 960" className='w-full h-full fill-notWhite'></svg></div>
+            <div onClick={handleBoxClick} id='FIVE' className='gridBox w-full h-1/3 p-2 border-4 sm:border-8 border-notWhite '><svg viewBox="0 -960 960 960" className='w-full h-full fill-notWhite'></svg></div>
+            <div onClick={handleBoxClick} id='EIGHT' className='gridBox w-full h-1/3 p-2 border-x-4 sm:border-x-8 border-notWhite '><svg viewBox="0 -960 960 960" className='w-full h-full fill-notWhite'></svg></div>
           
           </div>
           <div className='w-1/3 h-full'>
             <div onClick={handleBoxClick} id='THREE' className='gridBox w-full h-1/3 p-2 '><svg viewBox="0 -960 960 960" className='w-full h-full fill-notWhite'></svg></div>
-            <div onClick={handleBoxClick} id='SIX' className='gridBox w-full h-1/3 p-2 border-y-8 border-notWhite '><svg viewBox="0 -960 960 960" className='w-full h-full fill-notWhite'></svg></div>
+            <div onClick={handleBoxClick} id='SIX' className='gridBox w-full h-1/3 p-2 border-y-4 sm:border-y-8 border-notWhite '><svg viewBox="0 -960 960 960" className='w-full h-full fill-notWhite'></svg></div>
             <div onClick={handleBoxClick} id='NINE' className='gridBox w-full h-1/3 p-2 '><svg viewBox="0 -960 960 960" className='w-full h-full fill-notWhite'></svg></div>
 
           </div>
