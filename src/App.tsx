@@ -146,8 +146,8 @@ function App() {
             <h2 id='MED' onClick={handleDifficultyClick} className={`italic-hover hover:text-notWhite ${difficulty === GameDifficulty.MEDIUM ? 'text-notWhite italic' : ''}`}>MED</h2>-
             <h2 id='HARD' onClick={handleDifficultyClick} className={`italic-hover hover:text-notWhite ${difficulty === GameDifficulty.HARD ? 'text-notWhite italic' : ''}`}>HARD</h2>
           </div>
-          <h2 id='SOLO' className={`font-normal text-6xl sm:text-9xl italic-hover ${gameMode === GameMode.SOLO ? 'italic' : ''}`} onClick={handleModeClick}>SINGLEPLAYER</h2>
-          <h2 id='MULTI' className={`font-normal text-6xl sm:text-9xl italic-hover ${gameMode === GameMode.MULTIPLAYER ? 'italic' : ''}`} onClick={handleModeClick}>MULTIPLAYER</h2>
+          <h2 id='SOLO' className={`font-normal text-6xl sm:text-9xl italic-hover  ${gameMode === GameMode.SOLO ? 'italic text-notWhite' : 'text-notWhite-dark'}`} onClick={handleModeClick}>SINGLEPLAYER</h2>
+          <h2 id='MULTI' className={`font-normal text-6xl sm:text-9xl italic-hover ${gameMode === GameMode.MULTIPLAYER ? 'italic text-notWhite' : 'text-notWhite-dark'}`} onClick={handleModeClick}>MULTIPLAYER</h2>
           <h2 className={`font-normal text-6xl sm:text-9xl italic-hover`} onClick={handleRestartClick}>RESET BOARD</h2>
         </div>
       </nav>
