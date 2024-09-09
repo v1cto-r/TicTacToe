@@ -2,7 +2,7 @@
 
 A Tic Tac Toe game developed in Vite using React, Typescript and TailwindCSS
 
-Currently being hosted on vercel @ [https://my-tic-tac.vercel.app/](https://tictac.14082006.xyz/)
+Currently being hosted on vercel @ https://tictac.14082006.xyz/
 
 
 ## About the development
