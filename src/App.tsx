@@ -32,6 +32,15 @@ function App() {
     }
   }
 
+  function resetWins(): void {
+    const XWinsElement = document.getElementById('xWins');
+    const oWinsElement = document.getElementById('oWins');
+    if (XWinsElement && oWinsElement) {
+      XWinsElement.textContent = '0';
+      oWinsElement.textContent = '0';
+    }
+  }
+
   function tieSetter(): void {
     const announcementsElement = document.getElementById('announcements');
     announcementsElement!.textContent = 'TIE! (Click to reset)'
@@ -68,6 +77,7 @@ function App() {
     cursorBall.querySelector('svg')!.innerHTML = xIcon;
 
     game.restart()
+    resetWins()
 
     if (e.currentTarget.id === 'SOLO') {
       setGameMode(GameMode.SOLO)
